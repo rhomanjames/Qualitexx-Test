@@ -444,7 +444,6 @@ text-decoration-thickness: 6px;
 .nav-list {
     display: flex;
     flex-direction: row;
-    margin-right: 50px;
     font-size: 20px;
     align-items: center;
     justify-content: center;
@@ -567,6 +566,36 @@ header {
     color: black;
 }
 
+i {
+    font-size: 20px;
+    transition: .3s;
+    
+}
+
+
+.bottom-nav-div {
+    bottom: 0px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    border-top: 1px solid black;
+
+
+
+}
+
+.bottom-nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+}
+
 input {
     padding: 11px;
     margin: 0px;
@@ -687,6 +716,24 @@ a {
 
 }
 
+.schedule-button-large {
+    width: 175px;
+    background: #327240;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    justify-content: center;
+    justify-items: center;
+    transition: .3s;
+
+}
+
 
 .schedule-button:hover {
     background: black;
@@ -786,6 +833,44 @@ a {
 .column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 15px;
+    transition: .3s;
+    cursor: pointer;
+
+}
+
+.bottom-tab-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    transition: .3s;
+    cursor: pointer;
+    z-index: 99;
+
+}
+
+.active-bottom-tab {
+    background: #327240;
+    color: white;
+
+}
+
+.transition {
+    transition: .3s;
+}
+
+.bottom-tab-column:hover {
+    background: #327240;
+    color: white;
+
 }
 
 .footer {
@@ -818,9 +903,13 @@ a {
 @media only screen and (max-width: 1000px) {
 
 
+    
     .nav-list li{
         font-size: 20px;
     }
+
+
+
     .section, .sub-section {
       display: flex;
       flex-direction: column;
@@ -833,6 +922,7 @@ a {
 
     .content-card {
         max-width: 300px;
+
     }
 
 
@@ -843,7 +933,7 @@ a {
     .content-cards-div-grid-2-fr {
         grid-template-columns: 1fr;
     }
-   
+    
 
 
     .text-div {
@@ -859,6 +949,7 @@ a {
         list-style: none;
     }
 
+
     
 
     .sidebar {
@@ -873,15 +964,32 @@ a {
         display: none
     };
 
+    .schedule-button-large {
+        display: block;
+    }
+
+    .schedule-button {
+        display: none;
+    }
+
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 600px) {
 
+
+    .bottom-nav-div {
+        display: flex;
+        flex-direction: row;
+    }
     .nav-list li {
         list-style: none;
         margin-right: 10px;
         font-size: 20px;
         cursor: pointer;
+    }
+    
+    .nav-list {
+        display: none;
     }
 
     h1 {
@@ -893,9 +1001,7 @@ a {
        
     }
 
-    .logo-div {
-        display: none;
-    }
+
 
 
     .mobile-course-notice {
@@ -914,20 +1020,24 @@ a {
     }
 
     .nav-list {
-        display: flex;
-        flex-direction: row;
-        margin-right: 0px;
+        display: none;
     }
 
     img {
         max-width: 80%;
         height: auto;
-        border-radius: 16px;
+        border-radius: 4px;
         border: 1px transparent solid;
     }
 
+    .logo-div img {
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     .content-card {
-        max-width: 80%;
+        max-width: 250px;
     }
 
     .footer {
