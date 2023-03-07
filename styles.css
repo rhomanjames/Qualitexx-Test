@@ -1036,6 +1036,11 @@ a {
         margin-left: auto;
     }
 
+    .logo-div {
+        justify-content: center;
+        display: flex;
+    }
+
     .content-card {
         max-width: 250px;
     }
